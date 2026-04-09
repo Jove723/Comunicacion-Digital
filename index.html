@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermerprado El Rey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__left">
+                <div class="header__logo">
+                    <img src="images/Logo" alt="El Rey Logo">
+                </div>
+                <div class="header__menu">
+                    <button class="header__menu-item">
+                        <div class="header__menu-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span>Categorías</span>
+                    </button>
+                </div>
+                <div class="header__nav-links">
+                    <a href="#" class="header__nav-link">Inicio</a>
+                    <a href="#" class="header__nav-link">Sobre Nosotros</a>
+                </div>
+            </div>
+            
+            <div class="header__search">
+                <svg class="header__search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <input type="text" class="header__search-input" placeholder="¿Qué productos buscas?">
+            </div>
+
+            <div class="header__actions">
+                <button class="header__cart">
+                    <svg class="header__cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    <span class="header__cart-badge">2</span>
+                </button>
+                <div class="header__user">
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100&h=100&fit=crop" alt="Usuario">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Category Banner -->
+        <section class="category-banner">
+            <h1 class="category-banner__title">Supermerprado El Rey</h1>
+            <p class="category-banner__subtitle">Productos frescos para tu hogar</p>
+        </section>
+
+        <!-- Frutas y Verduras Section -->
+        <section class="product-section">
+            <div class="product-section__header">
+                <h2 class="product-section__title">Frutas y verduras</h2>
+                <div class="product-section__nav">
+                    <button class="product-section__nav-btn">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <button class="product-section__nav-btn">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <article class="product-card">
+                    <div class="product-card__image">
+                        <img src="Images/manzanas.jpg" alt="Manzanas">
+                    </div>
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Manzanas</h3>
+                        <p class="product-card__price">$10.000</p>
+                        <div class="product-card__actions">
+                            <div class="product-card__quantity">
+                                <button class="product-card__qty-btn">−</button>
+                                <span class="product-card__qty-value">1</span>
+                                <button class="product-card__qty-btn">+</button>
+                            </div>
+                            <button class="product-card__add">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product Card 2 -->
+                <article class="product-card">
+                    <div class="product-card__image">
+                        <img src="Images/Banana.jpg" alt="Plátanos">
+                    </div>
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Plátanos</h3>
+                        <p class="product-card__price">$10.000</p>
+                        <div class="product-card__actions">
+                            <div class="product-card__quantity">
+                                <button class="product-card__qty-btn">−</button>
+                                <span class="product-card__qty-value">1</span>
+                                <button class="product-card__qty-btn">+</button>
+                            </div>
+                            <button class="product-card__add">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product Card 3 -->
+                <article class="product-card">
+                    <div class="product-card__image">
+                        <img src="Images/naranjas.jpg" alt="Naranjas">
+                    </div>
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Naranjas</h3>
+                        <p class="product-card__price">$10.000</p>
+                        <div class="product-card__actions">
+                            <div class="product-card__quantity">
+                                <button class="product-card__qty-btn">−</button>
+                                <span class="product-card__qty-value">1</span>
+                                <button class="product-card__qty-btn">+</button>
+                            </div>
+                            <button class="product-card__add">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product Card 4 -->
+                <article class="product-card">
+                    <div class="product-card__image">
+                        <img src="Images/verduras.jpg" alt="Verduras">
+                    </div>
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Verduras</h3>
+                        <p class="product-card__price">$10.000</p>
+                        <div class="product-card__actions">
+                            <div class="product-card__quantity">
+                                <button class="product-card__qty-btn">−</button>
+                                <span class="product-card__qty-value">1</span>
+                                <button class="product-card__qty-btn">+</button>
+                            </div>
+                            <button class="product-card__add">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="carousel-dots">
+                <span class="carousel-dot carousel-dot--active"></span>
+                <span class="carousel-dot"></span>
+                <span class="carousel-dot"></span>
+            </div>
+        </section>
+
+        <!-- Carnes Frescas Section -->
+        <section class="product-section">
+            <div class="product-section__header">
+                <h2 class="product-section__title">Carnes frescas</h2>
+                <div class="product-section__nav">
+                    <button class="product-section__nav-btn">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <button class="product-section__nav-btn">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <article class="product-card">
+                    <div class="product-card__image">
+                        <img src="https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=300&h=300&fit=crop" alt="Pollo">
+                    </div>
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Pollo fresco</h3>
+                        <p class="product-card__price">$10.000</p>
+                        <div class="product-card__actions">
+                            <div class="product-card__quantity">
+                                <button class="product-card__qty-btn">−</button>
+                                <span class="product-card__qty-value">1</span>
+                                <button class="product-card__qty-btn">+</button>
+                            </div>
+                            <button class="product-card__add">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product Card 2 -->
+                <article class="product-card">
+                    <div class="product-card__image">
+                        <img src="https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300&h=300&fit=crop" alt="Res">
+                    </div>
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Carne de res</h3>
+                        <p class="product-card__price">$10.000</p>
+                        <div class="product-card__actions">
+                            <div class="product-card__quantity">
+                                <button class="product-card__qty-btn">−</button>
+                                <span class="product-card__qty-value">1</span>
+                                <button class="product-card__qty-btn">+</button>
+                            </div>
+                            <button class="product-card__add">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product Card 3 -->
+                <article class="product-card">
+                    <div class="product-card__image">
+                        <img src="Images/cerdo.jpg" alt="Cerdo">
+                    </div>
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Carne de cerdo</h3>
+                        <p class="product-card__price">$10.000</p>
+                        <div class="product-card__actions">
+                            <div class="product-card__quantity">
+                                <button class="product-card__qty-btn">−</button>
+                                <span class="product-card__qty-value">1</span>
+                                <button class="product-card__qty-btn">+</button>
+                            </div>
+                            <button class="product-card__add">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product Card 4 -->
+                <article class="product-card">
+                    <div class="product-card__image">
+                        <img src="Images/embutidos.jpg" alt="Embutidos">
+                    </div>
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Embutidos</h3>
+                        <p class="product-card__price">$10.000</p>
+                        <div class="product-card__actions">
+                            <div class="product-card__quantity">
+                                <button class="product-card__qty-btn">−</button>
+                                <span class="product-card__qty-value">1</span>
+                                <button class="product-card__qty-btn">+</button>
+                            </div>
+                            <button class="product-card__add">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="carousel-dots">
+                <span class="carousel-dot"></span>
+                <span class="carousel-dot carousel-dot--active"></span>
+                <span class="carousel-dot"></span>
+            </div>
+        </section>
+
+        <!-- View More Button -->
+        <div class="view-more">
+            <button class="btn btn--outline">
+                Ver más
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <div class="footer__logo-image">
+                            <img src="images/Logo" alt="El Rey Logo">
+                        </div>
+                        <span class="footer__logo-text">Supermerprado El Rey</span>
+                    </div>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__section-title">Contáctanos</h4>
+                    <div class="footer__contact-item">
+                        <span class="footer__contact-value">+57 323-3312609</span>
+                    </div>
+                    <div class="footer__contact-item">
+                        <span class="footer__contact-value">Calle 42sur #81-50</span>
+                        <span class="footer__contact-value">San Antonio de Prado, Antioquia</span>
+                    </div>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__section-title">Políticas</h4>
+                    <a href="#" class="footer__section-link">Política de tratamiento de datos</a>
+                    <a href="#" class="footer__section-link">Política de privacidad</a>
+                    <a href="#" class="footer__section-link">Política de cambios y devoluciones</a>
+                    <a href="#" class="footer__section-link">Política de descuentos</a>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__section-title">Sobre Nosotros</h4>
+                    <a href="#" class="footer__section-link">¿Quiénes somos?</a>
+                    <a href="#" class="footer__section-link">¿Dónde nos ubicamos?</a>
+                    <a href="#" class="footer__section-link">¿Cuál es nuestro propósito?</a>
+                    <a href="#" class="footer__section-link">¿Qué nos diferencia?</a>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 Supermerprado El Rey. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Product Card Interactions
+        document.querySelectorAll('.product-card').forEach(card => {
+            const minusBtn = card.querySelector('.product-card__qty-btn:first-child');
+            const plusBtn = card.querySelector('.product-card__qty-btn:last-child');
+            const qtyValue = card.querySelector('.product-card__qty-value');
+            const addBtn = card.querySelector('.product-card__add');
+
+            minusBtn?.addEventListener('click', () => {
+                const current = parseInt(qtyValue.textContent);
+                if (current > 1) {
+                    qtyValue.textContent = current - 1;
+                }
+            });
+
+            plusBtn?.addEventListener('click', () => {
+                const current = parseInt(qtyValue.textContent);
+                qtyValue.textContent = current + 1;
+            });
+
+            addBtn?.addEventListener('click', () => {
+                const badge = document.querySelector('.header__cart-badge');
+                const current = parseInt(badge.textContent);
+                badge.textContent = current + 1;
+                
+                // Animation feedback
+                addBtn.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    addBtn.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.querySelector('.header__search-input');
+        searchInput?.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                console.log('Searching for:', searchInput.value);
+            }
+        });
+    </script>
+</body>
+</html>
