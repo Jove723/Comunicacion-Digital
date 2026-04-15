@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnes Frescas - Supermerprado El Rey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__left">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="images/Logo.svg" alt="El Rey Logo">
+                    </a>
+                </div>
+                <div class="header__menu">
+                    <button class="header__menu-item" id="categoriesToggle">
+                        <div class="header__menu-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span>Categorías</span>
+                    </button>
+                </div>
+                <div class="header__nav-links">
+                    <a href="index.html" class="header__nav-link">Inicio</a>
+                    <a href="about.html" class="header__nav-link">Sobre Nosotros</a>
+                </div>
+            </div>
+
+            <div class="header__search">
+                <svg class="header__search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <input type="text" class="header__search-input" placeholder="¿Qué productos buscas?">
+            </div>
+
+            <div class="header__actions">
+                <button class="header__cart" id="cartToggle">
+                    <svg class="header__cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    <span class="header__cart-badge">0</span>
+                </button>
+                <div class="header__user">
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100&h=100&fit=crop" alt="Usuario">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main main--category">
+        <!-- Category Title -->
+        <h1 class="category-title">Carnes frescas</h1>
+
+        <!-- Controls Row -->
+        <div class="category-controls">
+            <div class="filter-controls">
+                <button class="filter-btn" id="filterToggle">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
+                    </svg>
+                    Filtros
+                </button>
+            </div>
+
+            <div class="sort-controls">
+                <button class="sort-btn sort-btn--active" data-sort="popularity">
+                    Popularidad
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <button class="sort-btn" data-sort="price-low">
+                    Precio: menor a mayor
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+                    </svg>
+                </button>
+                <button class="sort-btn" data-sort="price-high">
+                    Precio: mayor a menor
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="category-grid">
+            <!-- Row 1 -->
+            <article class="product-card" data-product-id="101">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=300&h=300&fit=crop" alt="Pechuga de pollo">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Pechuga de pollo</h3>
+                    <p class="product-card__price">$12.500</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="102">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1558030006-450675393462?w=300&h=300&fit=crop" alt="Lomo de cerdo">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Lomo de cerdo</h3>
+                    <p class="product-card__price">$15.000</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="103">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300&h=300&fit=crop" alt="Carne de res">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Carne de res</h3>
+                    <p class="product-card__price">$18.000</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="104">
+                <div class="product-card__image">
+                    <img src="Images/embutidos.jpg" alt="Chorizo">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Chorizo</h3>
+                    <p class="product-card__price">$8.000</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="105">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=300&h=300&fit=crop" alt="Punta de anca">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Punta de anca</h3>
+                    <p class="product-card__price">$22.000</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Row 2 -->
+            <article class="product-card" data-product-id="106">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=300&h=300&fit=crop" alt="Muslo de pollo">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Muslo de pollo</h3>
+                    <p class="product-card__price">$9.500</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="107">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1558030006-450675393462?w=300&h=300&fit=crop" alt="Chuleta de cerdo">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Chuleta de cerdo</h3>
+                    <p class="product-card__price">$14.000</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="108">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300&h=300&fit=crop" alt="Molido de res">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Molido de res</h3>
+                    <p class="product-card__price">$16.000</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="109">
+                <div class="product-card__image">
+                    <img src="Images/embutidos.jpg" alt="Salchicha">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Salchicha</h3>
+                    <p class="product-card__price">$6.500</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="110">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=300&h=300&fit=crop" alt="Ribeye">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Ribeye</h3>
+                    <p class="product-card__price">$28.000</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Row 3 -->
+            <article class="product-card" data-product-id="111">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=300&h=300&fit=crop" alt="Ala de pollo">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Ala de pollo</h3>
+                    <p class="product-card__price">$7.000</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="112">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1558030006-450675393462?w=300&h=300&fit=crop" alt="Tocino">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Tocino</h3>
+                    <p class="product-card__price">$11.000</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="113">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300&h=300&fit=crop" alt="Costilla de res">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Costilla de res</h3>
+                    <p class="product-card__price">$19.000</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="114">
+                <div class="product-card__image">
+                    <img src="Images/embutidos.jpg" alt="Mortadela">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Mortadela</h3>
+                    <p class="product-card__price">$5.500</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="115">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=300&h=300&fit=crop" alt="Pollo entero">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Pollo entero</h3>
+                    <p class="product-card__price">$16.000</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Row 4 -->
+            <article class="product-card" data-product-id="116">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1558030006-450675393462?w=300&h=300&fit=crop" alt="Costilla de cerdo">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Costilla de cerdo</h3>
+                    <p class="product-card__price">$13.000</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="117">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=300&h=300&fit=crop" alt="Punta de anca">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Punta de anca</h3>
+                    <p class="product-card__price">$22.000</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="118">
+                <div class="product-card__image">
+                    <img src="Images/embutidos.jpg" alt="Jamón">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Jamón</h3>
+                    <p class="product-card__price">$12.000</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="119">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300&h=300&fit=crop" alt="Bistec">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Bistec</h3>
+                    <p class="product-card__price">$14.500</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-product-id="120">
+                <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=300&h=300&fit=crop" alt="Pollito">
+                </div>
+                <div class="product-card__info">
+                    <h3 class="product-card__title">Pollito</h3>
+                    <p class="product-card__price">$11.000</p>
+                    <div class="product-card__actions">
+                        <div class="product-card__quantity">
+                            <button class="product-card__qty-btn">−</button>
+                            <span class="product-card__qty-value">1</span>
+                            <button class="product-card__qty-btn">+</button>
+                        </div>
+                        <button class="product-card__add">
+                            <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- View More Button -->
+        <div class="view-more">
+            <button class="btn btn--outline">
+                Ver más
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__top">
+                <div class="footer__logo">
+                    <img src="images/Logo.svg" alt="El Rey Logo">
+                </div>
+
+                <div class="footer__sections">
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Contáctanos</h4>
+                        <p class="footer__contact-item">+57 323-3312609</p>
+                        <p class="footer__contact-item">Calle 42sur #81-50</p>
+                        <p class="footer__contact-item">San Antonio de Prado, Antioquia</p>
+                    </div>
+
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Políticas</h4>
+                        <a href="#" class="footer__section-link">Política de tratamiento de datos</a>
+                        <a href="#" class="footer__section-link">Política de privacidad</a>
+                        <a href="#" class="footer__section-link">Política de cambios y devoluciones</a>
+                        <a href="#" class="footer__section-link">Política de descuentos</a>
+                    </div>
+
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Sobre Nosotros</h4>
+                        <a href="about.html" class="footer__section-link">¿Quiénes somos?</a>
+                        <a href="about.html" class="footer__section-link">¿Dónde nos ubicamos?</a>
+                        <a href="about.html" class="footer__section-link">¿Cuál es nuestro propósito?</a>
+                        <a href="about.html" class="footer__section-link">¿Qué nos diferencia?</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 Supermerprado El Rey. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Filter Sidebar -->
+    <div class="filter-overlay" id="filterOverlay"></div>
+    <aside class="filter-sidebar" id="filterSidebar">
+        <div class="filter-sidebar__header">
+            <h2 class="filter-sidebar__title">Filtros</h2>
+            <button class="filter-sidebar__close" id="filterClose">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <div class="filter-sidebar__content">
+            <div class="filter-group">
+                <h3 class="filter-group__title">Tipo de carne</h3>
+                <label class="filter-checkbox">
+                    <input type="checkbox" name="tipo" value="pollo">
+                    <span class="filter-checkbox__mark"></span>
+                    Pollo
+                </label>
+                <label class="filter-checkbox">
+                    <input type="checkbox" name="tipo" value="res">
+                    <span class="filter-checkbox__mark"></span>
+                    Res
+                </label>
+                <label class="filter-checkbox">
+                    <input type="checkbox" name="tipo" value="cerdo">
+                    <span class="filter-checkbox__mark"></span>
+                    Cerdo
+                </label>
+                <label class="filter-checkbox">
+                    <input type="checkbox" name="tipo" value="embutidos">
+                    <span class="filter-checkbox__mark"></span>
+                    Embutidos
+                </label>
+            </div>
+
+            <div class="filter-group">
+                <h3 class="filter-group__title">Precio</h3>
+                <label class="filter-checkbox">
+                    <input type="checkbox" name="precio" value="0-10000">
+                    <span class="filter-checkbox__mark"></span>
+                    Hasta $10.000
+                </label>
+                <label class="filter-checkbox">
+                    <input type="checkbox" name="precio" value="10000-15000">
+                    <span class="filter-checkbox__mark"></span>
+                    $10.000 - $15.000
+                </label>
+                <label class="filter-checkbox">
+                    <input type="checkbox" name="precio" value="15000-20000">
+                    <span class="filter-checkbox__mark"></span>
+                    $15.000 - $20.000
+                </label>
+                <label class="filter-checkbox">
+                    <input type="checkbox" name="precio" value="20000+">
+                    <span class="filter-checkbox__mark"></span>
+                    Más de $20.000
+                </label>
+            </div>
+
+            <div class="filter-group">
+                <h3 class="filter-group__title">Disponibilidad</h3>
+                <label class="filter-checkbox">
+                    <input type="checkbox" name="disponibilidad" value="disponible">
+                    <span class="filter-checkbox__mark"></span>
+                    Disponible
+                </label>
+                <label class="filter-checkbox">
+                    <input type="checkbox" name="disponibilidad" value="proximamente">
+                    <span class="filter-checkbox__mark"></span>
+                    No Disponible (Próximamente)
+                </label>
+            </div>
+        </div>
+        <div class="filter-sidebar__footer">
+            <button class="btn btn--outline filter-sidebar__btn" id="filterClear">Limpiar</button>
+            <button class="btn btn--primary filter-sidebar__btn" id="filterApply">Aplicar</button>
+        </div>
+    </aside>
+
+    <!-- Categories Sidebar Menu -->
+    <div class="categories-overlay" id="categoriesOverlay"></div>
+    <aside class="categories-sidebar" id="categoriesSidebar">
+        <div class="categories-sidebar__header">
+            <h2 class="categories-sidebar__title">Categorías</h2>
+            <button class="categories-sidebar__close" id="categoriesClose">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="categories-sidebar__nav">
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/broom-svgrepo-com.svg" alt="Aseo del hogar" class="categories-sidebar__icon" width="24" height="24">
+                Aseo del hogar
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/tomato-svgrepo-com.svg" alt="Frutas y verduras" class="categories-sidebar__icon" width="24" height="24">
+                Frutas y verduras
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="carnes.html" class="categories-sidebar__link">
+                <img src="Images/meat-svgrepo-com.svg" alt="Carnes frescas" class="categories-sidebar__icon" width="24" height="24">
+                Carnes frescas
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="24" height="24">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/wheat-svgrepo-com.svg" alt="Despensa" class="categories-sidebar__icon" width="24" height="24">
+                Despensa
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/bread-4-svgrepo-com.svg" alt="Panadería" class="categories-sidebar__icon" width="24" height="24">
+                Panadería
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/milk-svgrepo-com.svg" alt="Lácteos" class="categories-sidebar__icon" width="24" height="24">
+                Lácteos
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/cookie-svgrepo-com.svg" alt="Pasabocas" class="categories-sidebar__icon" width="24" height="24">
+                Pasabocas
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/wine-glass-2-svgrepo-com.svg" alt="Bebidas y licores" class="categories-sidebar__icon" width="24" height="24">
+                Bebidas y licores
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-sidebar__header">
+            <h2 class="cart-sidebar__title">Tu carrito</h2>
+            <span class="cart-sidebar__count" id="cartCount">0</span>
+            <button class="cart-sidebar__close" id="cartClose">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-sidebar__content" id="cartContent">
+        </div>
+        <div class="cart-sidebar__footer" id="cartFooter">
+            <div class="cart-sidebar__total">
+                <span class="cart-sidebar__total-label">Total</span>
+                <span class="cart-sidebar__total-value" id="cartTotal">$0</span>
+            </div>
+            <a href="checkout.html" class="btn btn--primary btn--full cart-sidebar__checkout">
+                Ir a pagar
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </aside>
+
+    <script src="cart.js"></script>
+    <script>
+        // Categories Sidebar Menu Toggle
+        const categoriesToggle = document.getElementById('categoriesToggle');
+        const categoriesSidebar = document.getElementById('categoriesSidebar');
+        const categoriesOverlay = document.getElementById('categoriesOverlay');
+        const categoriesClose = document.getElementById('categoriesClose');
+
+        function openCategories() {
+            categoriesSidebar.classList.add('categories-sidebar--open');
+            categoriesOverlay.classList.add('categories-overlay--visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCategories() {
+            categoriesSidebar.classList.remove('categories-sidebar--open');
+            categoriesOverlay.classList.remove('categories-overlay--visible');
+            document.body.style.overflow = '';
+        }
+
+        categoriesToggle?.addEventListener('click', openCategories);
+        categoriesClose?.addEventListener('click', closeCategories);
+        categoriesOverlay?.addEventListener('click', closeCategories);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && categoriesSidebar.classList.contains('categories-sidebar--open')) {
+                closeCategories();
+            }
+        });
+
+        // Filter Sidebar Toggle
+        const filterToggle = document.getElementById('filterToggle');
+        const filterSidebar = document.getElementById('filterSidebar');
+        const filterOverlay = document.getElementById('filterOverlay');
+        const filterClose = document.getElementById('filterClose');
+        const filterClear = document.getElementById('filterClear');
+        const filterApply = document.getElementById('filterApply');
+
+        function openFilter() {
+            filterSidebar.classList.add('filter-sidebar--open');
+            filterOverlay.classList.add('filter-overlay--visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFilter() {
+            filterSidebar.classList.remove('filter-sidebar--open');
+            filterOverlay.classList.remove('filter-overlay--visible');
+            document.body.style.overflow = '';
+        }
+
+        filterToggle?.addEventListener('click', () => {
+            if (filterSidebar.classList.contains('filter-sidebar--open')) {
+                closeFilter();
+            } else {
+                openFilter();
+            }
+        });
+        filterClose?.addEventListener('click', closeFilter);
+        filterOverlay?.addEventListener('click', closeFilter);
+        filterClear?.addEventListener('click', () => {
+            document.querySelectorAll('.filter-checkbox input').forEach(cb => cb.checked = false);
+            applyFilters();
+        });
+        filterApply?.addEventListener('click', () => {
+            applyFilters();
+            closeFilter();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && filterSidebar.classList.contains('filter-sidebar--open')) {
+                closeFilter();
+            }
+        });
+
+        // Product Grid Reference
+        const categoryGrid = document.querySelector('.category-grid');
+        const productCards = Array.from(document.querySelectorAll('.product-card'));
+
+        // Sort Functionality
+        const sortBtns = document.querySelectorAll('.sort-btn');
+        
+        function sortProducts(sortType) {
+            const cards = Array.from(categoryGrid.querySelectorAll('.product-card'));
+            const cardsData = cards.map(card => ({
+                element: card,
+                price: parseInt(card.querySelector('.product-card__price').textContent.replace(/[$.]/g, ''))
+            }));
+
+            if (sortType === 'price-low') {
+                cardsData.sort((a, b) => a.price - b.price);
+            } else if (sortType === 'price-high') {
+                cardsData.sort((a, b) => b.price - a.price);
+            }
+
+            cardsData.forEach((card, index) => {
+                categoryGrid.appendChild(card.element);
+            });
+        }
+
+        sortBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                sortBtns.forEach(b => b.classList.remove('sort-btn--active'));
+                btn.classList.add('sort-btn--active');
+                const sortType = btn.dataset.sort;
+                sortProducts(sortType);
+            });
+        });
+
+        // Filter Functionality
+        function applyFilters() {
+            const checkedTypes = Array.from(document.querySelectorAll('input[name="tipo"]:checked')).map(cb => cb.value);
+            const checkedPrices = Array.from(document.querySelectorAll('input[name="precio"]:checked')).map(cb => cb.value);
+            
+            productCards.forEach(card => {
+                const title = card.querySelector('.product-card__title').textContent.toLowerCase();
+                const price = parseInt(card.querySelector('.product-card__price').textContent.replace(/[$.]/g, ''));
+                
+                let showByType = true;
+                let showByPrice = true;
+
+                if (checkedTypes.length > 0) {
+                    const isPollo = checkedTypes.includes('pollo') && title.includes('pollo') && !title.includes('pollito');
+                    const isRes = checkedTypes.includes('res') && (title.includes('res') || title.includes('bistec') || title.includes('ribeye') || title.includes('molido') || title.includes('costilla de res') || title.includes('punta'));
+                    const isCerdo = checkedTypes.includes('cerdo') && (title.includes('cerdo') || title.includes('chuleta') || title.includes('tocino') || title.includes('lomo'));
+                    const isEmbutidos = checkedTypes.includes('embutidos') && (title.includes('chorizo') || title.includes('salchicha') || title.includes('mortadela') || title.includes('jamón'));
+                    
+                    showByType = isPollo || isRes || isCerdo || isEmbutidos;
+                }
+
+                if (checkedPrices.length > 0) {
+                    showByPrice = checkedPrices.some(range => {
+                        if (range === '0-10000') return price <= 10000;
+                        if (range === '10000-15000') return price >= 10000 && price <= 15000;
+                        if (range === '15000-20000') return price >= 15000 && price <= 20000;
+                        if (range === '20000+') return price > 20000;
+                        return true;
+                    });
+                }
+
+                if (showByType && showByPrice) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeInUp 400ms ease-out backwards';
+                    card.style.animationDelay = `${productCards.indexOf(card) * 50}ms`;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        document.querySelectorAll('.filter-checkbox input').forEach(checkbox => {
+            checkbox.addEventListener('change', applyFilters);
+        });
+    </script>
+</body>
+</html>

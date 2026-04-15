@@ -18,7 +18,7 @@
                     <img src="images/Logo.svg" alt="El Rey Logo">
                 </div>
                 <div class="header__menu">
-                    <button class="header__menu-item">
+                    <button class="header__menu-item" id="categoriesToggle">
                         <div class="header__menu-icon">
                             <span></span>
                             <span></span>
@@ -41,11 +41,11 @@
             </div>
 
             <div class="header__actions">
-                <button class="header__cart">
+                <button class="header__cart" id="cartToggle">
                     <svg class="header__cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
                     </svg>
-                    <span class="header__cart-badge">2</span>
+                    <span class="header__cart-badge">0</span>
                 </button>
                 <div class="header__user">
                     <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100&h=100&fit=crop" alt="Usuario">
@@ -82,7 +82,7 @@
             
             <div class="product-grid">
                 <!-- Product Card 1 -->
-                <article class="product-card">
+                <article class="product-card" data-product-id="1">
                     <div class="product-card__image">
                         <img src="Images/manzanas.jpg" alt="Manzanas">
                     </div>
@@ -103,7 +103,7 @@
                 </article>
 
                 <!-- Product Card 2 -->
-                <article class="product-card">
+                <article class="product-card" data-product-id="2">
                     <div class="product-card__image">
                         <img src="Images/Banana.jpg" alt="Plátanos">
                     </div>
@@ -124,7 +124,7 @@
                 </article>
 
                 <!-- Product Card 3 -->
-                <article class="product-card">
+                <article class="product-card" data-product-id="3">
                     <div class="product-card__image">
                         <img src="Images/naranjas.jpg" alt="Naranjas">
                     </div>
@@ -145,7 +145,7 @@
                 </article>
 
                 <!-- Product Card 4 -->
-                <article class="product-card">
+                <article class="product-card" data-product-id="4">
                     <div class="product-card__image">
                         <img src="Images/verduras.jpg" alt="Verduras">
                     </div>
@@ -193,7 +193,7 @@
             
             <div class="product-grid">
                 <!-- Product Card 1 -->
-                <article class="product-card">
+                <article class="product-card" data-product-id="5">
                     <div class="product-card__image">
                         <img src="https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=300&h=300&fit=crop" alt="Pollo">
                     </div>
@@ -214,7 +214,7 @@
                 </article>
 
                 <!-- Product Card 2 -->
-                <article class="product-card">
+                <article class="product-card" data-product-id="6">
                     <div class="product-card__image">
                         <img src="https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300&h=300&fit=crop" alt="Res">
                     </div>
@@ -235,7 +235,7 @@
                 </article>
 
                 <!-- Product Card 3 -->
-                <article class="product-card">
+                <article class="product-card" data-product-id="7">
                     <div class="product-card__image">
                         <img src="Images/cerdo.jpg" alt="Cerdo">
                     </div>
@@ -256,7 +256,7 @@
                 </article>
 
                 <!-- Product Card 4 -->
-                <article class="product-card">
+                <article class="product-card" data-product-id="8">
                     <div class="product-card__image">
                         <img src="Images/embutidos.jpg" alt="Embutidos">
                     </div>
@@ -335,37 +335,118 @@
         </div>
     </footer>
 
+    <!-- Categories Sidebar Menu -->
+    <div class="categories-overlay" id="categoriesOverlay"></div>
+    <aside class="categories-sidebar" id="categoriesSidebar">
+        <div class="categories-sidebar__header">
+            <h2 class="categories-sidebar__title">Categorías</h2>
+            <button class="categories-sidebar__close" id="categoriesClose">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="categories-sidebar__nav">
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/broom-svgrepo-com.svg" alt="Aseo del hogar" class="categories-sidebar__icon" width="24" height="24">
+                Aseo del hogar
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/tomato-svgrepo-com.svg" alt="Frutas y verduras" class="categories-sidebar__icon" width="24" height="24">
+                Frutas y verduras
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="carnes.html" class="categories-sidebar__link">
+                <img src="Images/meat-svgrepo-com.svg" alt="Carnes frescas" class="categories-sidebar__icon" width="24" height="24">
+                Carnes frescas
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="24" height="24">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/wheat-svgrepo-com.svg" alt="Despensa" class="categories-sidebar__icon" width="24" height="24">
+                Despensa
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/bread-4-svgrepo-com.svg" alt="Panadería" class="categories-sidebar__icon" width="24" height="24">
+                Panadería
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/milk-svgrepo-com.svg" alt="Lácteos" class="categories-sidebar__icon" width="24" height="24">
+                Lácteos
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/cookie-svgrepo-com.svg" alt="Pasabocas" class="categories-sidebar__icon" width="24" height="24">
+                Pasabocas
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/wine-glass-2-svgrepo-com.svg" alt="Bebidas y licores" class="categories-sidebar__icon" width="24" height="24">
+                Bebidas y licores
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-sidebar__header">
+            <h2 class="cart-sidebar__title">Tu carrito</h2>
+            <span class="cart-sidebar__count" id="cartCount">0</span>
+            <button class="cart-sidebar__close" id="cartClose">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-sidebar__content" id="cartContent">
+        </div>
+        <div class="cart-sidebar__footer" id="cartFooter">
+            <div class="cart-sidebar__total">
+                <span class="cart-sidebar__total-label">Total</span>
+                <span class="cart-sidebar__total-value" id="cartTotal">$0</span>
+            </div>
+            <a href="checkout.html" class="btn btn--primary btn--full cart-sidebar__checkout">
+                Ir a pagar
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </aside>
+
+    <script src="cart.js"></script>
     <script>
-        // Product Card Interactions
-        document.querySelectorAll('.product-card').forEach(card => {
-            const minusBtn = card.querySelector('.product-card__qty-btn:first-child');
-            const plusBtn = card.querySelector('.product-card__qty-btn:last-child');
-            const qtyValue = card.querySelector('.product-card__qty-value');
-            const addBtn = card.querySelector('.product-card__add');
+        // Categories Sidebar Menu Toggle
+        const categoriesToggle = document.getElementById('categoriesToggle');
+        const categoriesSidebar = document.getElementById('categoriesSidebar');
+        const categoriesOverlay = document.getElementById('categoriesOverlay');
+        const categoriesClose = document.getElementById('categoriesClose');
 
-            minusBtn?.addEventListener('click', () => {
-                const current = parseInt(qtyValue.textContent);
-                if (current > 1) {
-                    qtyValue.textContent = current - 1;
-                }
-            });
+        function openCategories() {
+            categoriesSidebar.classList.add('categories-sidebar--open');
+            categoriesOverlay.classList.add('categories-overlay--visible');
+            document.body.style.overflow = 'hidden';
+        }
 
-            plusBtn?.addEventListener('click', () => {
-                const current = parseInt(qtyValue.textContent);
-                qtyValue.textContent = current + 1;
-            });
+        function closeCategories() {
+            categoriesSidebar.classList.remove('categories-sidebar--open');
+            categoriesOverlay.classList.remove('categories-overlay--visible');
+            document.body.style.overflow = '';
+        }
 
-            addBtn?.addEventListener('click', () => {
-                const badge = document.querySelector('.header__cart-badge');
-                const current = parseInt(badge.textContent);
-                badge.textContent = current + 1;
-                
-                // Animation feedback
-                addBtn.style.transform = 'scale(0.9)';
-                setTimeout(() => {
-                    addBtn.style.transform = 'scale(1)';
-                }, 150);
-            });
+        categoriesToggle?.addEventListener('click', openCategories);
+        categoriesClose?.addEventListener('click', closeCategories);
+        categoriesOverlay?.addEventListener('click', closeCategories);
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && categoriesSidebar.classList.contains('categories-sidebar--open')) {
+                closeCategories();
+            }
         });
 
         // Search functionality

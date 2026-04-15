@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros - Supermerprado El Rey</title>
+    <title>Checkout - Supermerprado El Rey</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,10 +15,12 @@
         <nav class="header__nav">
             <div class="header__left">
                 <div class="header__logo">
-                    <img src="images/Logo.svg" alt="El Rey Logo">
+                    <a href="index.html">
+                        <img src="images/Logo.svg" alt="El Rey Logo">
+                    </a>
                 </div>
                 <div class="header__menu">
-                    <button class="header__menu-item">
+                    <button class="header__menu-item" id="categoriesToggle">
                         <div class="header__menu-icon">
                             <span></span>
                             <span></span>
@@ -29,10 +31,10 @@
                 </div>
                 <div class="header__nav-links">
                     <a href="index.html" class="header__nav-link">Inicio</a>
-                    <a href="about.html" class="header__nav-link header__nav-link--active">Sobre Nosotros</a>
+                    <a href="about.html" class="header__nav-link">Sobre Nosotros</a>
                 </div>
             </div>
-            
+
             <div class="header__search">
                 <svg class="header__search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -55,73 +57,20 @@
     </header>
 
     <!-- Main Content -->
-    <main class="main main--centered">
-        <h1 class="about-title">Sobre Nosotros</h1>
-
-        <!-- ¿Quiénes somos? -->
-        <section class="about-section">
-            <div class="about-section__content">
-                <h2 class="about-section__title">¿Quiénes somos?</h2>
-                <p class="about-section__text">
-                    En Supermerprado El Rey, somos el aliado de confianza del hogar antioqueño. Con más de tres años de trayectoria en San Antonio de Prado, nos dedicamos a ofrecer productos frescos de la canasta familiar con un compromiso real por el bienestar de nuestra comunidad. Nuestra esencia combina la calidez de nuestra gente con el deseo de facilitar la vida diaria de las familias, brindando siempre calidad a un precio justo para el bolsillo.
-                </p>
-            </div>
-            <div class="about-section__image">
-                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&h=400&fit=crop" alt="Supermercado">
-            </div>
-        </section>
-
-        <!-- ¿Dónde nos ubicamos? -->
-        <section class="about-section about-section--reverse">
-            <div class="about-section__content">
-                <h2 class="about-section__title">¿Dónde nos ubicamos?</h2>
-                <p class="about-section__text">
-                    Estamos ubicados en el corazón de San Antonio de Prado, en la Calle 42 Sur #81-50, a solo dos cuadras del parque principal. Esta ubicación estratégica nos permite ser el punto de referencia para los habitantes del casco urbano y veredas cercanas. Además, para tu comodidad, contamos con un servicio de domicilios propios coordinado con agilidad a través de nuestras líneas de WhatsApp.
-                </p>
-            </div>
-            <div class="about-section__image">
-                <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=400&h=400&fit=crop" alt="Ubicación">
-            </div>
-        </section>
-
-        <!-- ¿Qué nos diferencia? -->
-        <section class="about-section">
-            <div class="about-section__content">
-                <h2 class="about-section__title">¿Qué nos diferencia?</h2>
-                <p class="about-section__text">
-                    Nos distingue el equilibrio perfecto entre tradición y servicio cercano. Mientras el mercado se vuelve impersonal, en El Rey apostamos por el trato humano: desde nuestra carnicería especializada hasta la atención amable que te hace sentir entre amigos. Somos una solución integral donde, además de mercar, puedes realizar pagos y trámites bancarios. Aquí no eres un cliente más, eres parte de nuestra familia y trabajamos para que El Rey de la casa seas vos.
-                </p>
-            </div>
-            <div class="about-section__image">
-                <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=400&h=400&fit=crop" alt="Servicio al cliente">
-            </div>
-        </section>
-
-        <!-- Nuestro Propósito -->
-        <section class="about-section about-section--reverse">
-            <div class="about-section__content">
-                <h2 class="about-section__title">Nuestro Propósito</h2>
-                <p class="about-section__text">
-                    En Supermerprado El Rey, nuestra razón de ser trasciende la venta de abarrotes. Nos levantamos cada día para ofrecerte productos frescos y de calidad a tu alcance, respaldados por un servicio cercano y un compromiso genuino con el bienestar de nuestra comunidad local. Queremos que sientas que, más que un supermercado, tenés a tu lado un aliado que se preocupa por tu hogar.
-                </p>
-            </div>
-            <div class="about-section__image">
-                <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=400&h=400&fit=crop" alt="Productos frescos">
-            </div>
-        </section>
-
-        <!-- Nuestra Misión -->
-        <section class="about-section">
-            <div class="about-section__content">
-                <h2 class="about-section__title">Nuestra Misión</h2>
-                <p class="about-section__text">
-                    Nuestra misión es abastecer los hogares de San Antonio de Prado con una oferta amplia de productos accesibles y un servicio humano. Trabajamos incansablemente para ser tu opción más práctica y confiable, facilitando tu día a día a través de la calidez en nuestra atención física y la agilidad de nuestros canales digitales. Estamos comprometidos con el crecimiento de nuestro barrio, asegurando que cada familia encuentre calidad sin que el bolsillo sufra.
-                </p>
-            </div>
-            <div class="about-section__image">
-                <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=400&h=400&fit=crop" alt="Comunidad">
-            </div>
-        </section>
+    <main class="main" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; text-align: center; padding: 48px 24px;">
+        <div style="animation: fadeInUp 400ms ease-out;">
+            <svg width="120" height="120" fill="none" stroke="var(--color-grey)" stroke-width="1.5" viewBox="0 0 24 24" style="opacity: 0.5; margin-bottom: 24px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            <h1 style="font-family: var(--font-family-heading); font-size: var(--font-size-h2); font-weight: var(--font-weight-bold); color: var(--color-black); margin-bottom: 16px;">Próximamente</h1>
+            <p style="font-family: var(--font-family-body); font-size: var(--font-size-body1); color: var(--color-grey); margin-bottom: 32px; max-width: 400px;">Estamos trabajando en la página de pago para brindarte la mejor experiencia de compra.</p>
+            <a href="index.html" class="btn btn--primary">
+                Volver al inicio
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                </svg>
+            </a>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -131,7 +80,7 @@
                 <div class="footer__logo">
                     <img src="images/Logo.svg" alt="El Rey Logo">
                 </div>
-                
+
                 <div class="footer__sections">
                     <div class="footer__section">
                         <h4 class="footer__section-title">Contáctanos</h4>
@@ -150,10 +99,10 @@
 
                     <div class="footer__section">
                         <h4 class="footer__section-title">Sobre Nosotros</h4>
-                        <a href="#" class="footer__section-link">¿Quiénes somos?</a>
-                        <a href="#" class="footer__section-link">¿Dónde nos ubicamos?</a>
-                        <a href="#" class="footer__section-link">¿Cuál es nuestro propósito?</a>
-                        <a href="#" class="footer__section-link">¿Qué nos diferencia?</a>
+                        <a href="about.html" class="footer__section-link">¿Quiénes somos?</a>
+                        <a href="about.html" class="footer__section-link">¿Dónde nos ubicamos?</a>
+                        <a href="about.html" class="footer__section-link">¿Cuál es nuestro propósito?</a>
+                        <a href="about.html" class="footer__section-link">¿Qué nos diferencia?</a>
                     </div>
                 </div>
             </div>
