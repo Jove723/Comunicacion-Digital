@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Producto - Supermerprado El Rey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__left">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="images/Logo.svg" alt="El Rey Logo">
+                    </a>
+                </div>
+                <div class="header__menu">
+                    <button class="header__menu-item" id="categoriesToggle">
+                        <div class="header__menu-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span>Categorías</span>
+                    </button>
+                </div>
+                <div class="header__nav-links">
+                    <a href="index.html" class="header__nav-link">Inicio</a>
+                    <a href="about.html" class="header__nav-link">Sobre Nosotros</a>
+                </div>
+            </div>
+
+            <div class="header__search">
+                <svg class="header__search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <input type="text" class="header__search-input" placeholder="¿Qué productos buscas?">
+            </div>
+
+            <div class="header__actions">
+                <button class="header__cart" id="cartToggle">
+                    <svg class="header__cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    <span class="header__cart-badge">0</span>
+                </button>
+                <div class="header__user">
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100&h=100&fit=crop" alt="Usuario">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main main--product" id="productMain">
+        <!-- Product Detail Section -->
+        <section class="product-detail" id="productDetail">
+            <div class="product-detail__gallery">
+                <div class="product-detail__image" id="productImage">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="product-detail__info">
+                <div class="product-detail__info-header">
+                    <h1 class="product-detail__title" id="productName"></h1>
+                    <div class="product-detail__actions">
+                        <button class="product-detail__action-btn" title="Compartir">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                            </svg>
+                        </button>
+                        <button class="product-detail__action-btn product-detail__action-btn--favorite" title="Favorito">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <p class="product-detail__price" id="productPrice"></p>
+                <p class="product-detail__description" id="productDescription"></p>
+                <div class="product-detail__quantity">
+                    <button class="product-detail__qty-btn" id="qtyMinus">−</button>
+                    <span class="product-detail__qty-value" id="qtyValue">1</span>
+                    <button class="product-detail__qty-btn" id="qtyPlus">+</button>
+                    <button class="btn btn--primary product-detail__add-btn" id="addToCartBtn">
+                        Agregar al carrito
+                    </button>
+                </div>
+                <div class="product-detail__bottom-actions">
+                    <a href="index.html" class="btn btn--outline">
+                        Seguir comprando
+                    </a>
+                    <button class="btn btn--primary" id="buyNowBtn">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                        Comprar ahora
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Section -->
+        <section class="product-bottom">
+            <div class="product-bottom__left">
+                <!-- Tabs -->
+                <div class="product-tabs">
+                    <div class="product-tabs__header">
+                        <button class="product-tabs__tab product-tabs__tab--active" data-tab="description">
+                            Descripción
+                        </button>
+                        <button class="product-tabs__tab" data-tab="reviews">
+                            Reseñas
+                        </button>
+                    </div>
+                    <div class="product-tabs__content">
+                        <div class="product-tabs__panel product-tabs__panel--active" id="panelDescription">
+                            <p id="fullDescription"></p>
+                        </div>
+                        <div class="product-tabs__panel" id="panelReviews">
+                            <div class="product-reviews" id="reviewsContainer">
+                                <div class="product-reviews__add">
+                                    <h3 class="product-reviews__add-title">Agrega una reseña</h3>
+                                    <div class="product-reviews__stars">
+                                        <span class="product-reviews__star" data-rating="1">☆</span>
+                                        <span class="product-reviews__star" data-rating="2">☆</span>
+                                        <span class="product-reviews__star" data-rating="3">☆</span>
+                                        <span class="product-reviews__star" data-rating="4">☆</span>
+                                        <span class="product-reviews__star" data-rating="5">☆</span>
+                                    </div>
+                                </div>
+                                <div class="product-reviews__list" id="reviewsList"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-bottom__right">
+                <h2 class="product-related__title">Productos relacionados</h2>
+                <div class="product-related__grid" id="relatedGrid"></div>
+                <div class="carousel-dots" id="relatedDots"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__top">
+                <div class="footer__logo">
+                    <img src="images/Logo.svg" alt="El Rey Logo">
+                </div>
+
+                <div class="footer__sections">
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Contáctanos</h4>
+                        <p class="footer__contact-item">+57 323-3312609</p>
+                        <p class="footer__contact-item">Calle 42sur #81-50</p>
+                        <p class="footer__contact-item">San Antonio de Prado, Antioquia</p>
+                    </div>
+
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Políticas</h4>
+                        <a href="#" class="footer__section-link">Política de tratamiento de datos</a>
+                        <a href="#" class="footer__section-link">Política de privacidad</a>
+                        <a href="#" class="footer__section-link">Política de cambios y devoluciones</a>
+                        <a href="#" class="footer__section-link">Política de descuentos</a>
+                    </div>
+
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Sobre Nosotros</h4>
+                        <a href="about.html" class="footer__section-link">¿Quiénes somos?</a>
+                        <a href="about.html" class="footer__section-link">¿Dónde nos ubicamos?</a>
+                        <a href="about.html" class="footer__section-link">¿Cuál es nuestro propósito?</a>
+                        <a href="about.html" class="footer__section-link">¿Qué nos diferencia?</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 Supermerprado El Rey. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Categories Sidebar Menu -->
+    <div class="categories-overlay" id="categoriesOverlay"></div>
+    <aside class="categories-sidebar" id="categoriesSidebar">
+        <div class="categories-sidebar__header">
+            <h2 class="categories-sidebar__title">Categorías</h2>
+            <button class="categories-sidebar__close" id="categoriesClose">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="categories-sidebar__nav">
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/broom-svgrepo-com.svg" alt="Aseo del hogar" class="categories-sidebar__icon" width="24" height="24">
+                Aseo del hogar
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/tomato-svgrepo-com.svg" alt="Frutas y verduras" class="categories-sidebar__icon" width="24" height="24">
+                Frutas y verduras
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="carnes.html" class="categories-sidebar__link">
+                <img src="Images/meat-svgrepo-com.svg" alt="Carnes frescas" class="categories-sidebar__icon" width="24" height="24">
+                Carnes frescas
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="24" height="24">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/wheat-svgrepo-com.svg" alt="Despensa" class="categories-sidebar__icon" width="24" height="24">
+                Despensa
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/bread-4-svgrepo-com.svg" alt="Panadería" class="categories-sidebar__icon" width="24" height="24">
+                Panadería
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/milk-svgrepo-com.svg" alt="Lácteos" class="categories-sidebar__icon" width="24" height="24">
+                Lácteos
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/cookie-svgrepo-com.svg" alt="Pasabocas" class="categories-sidebar__icon" width="24" height="24">
+                Pasabocas
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+            <a href="#" class="categories-sidebar__link">
+                <img src="Images/wine-glass-2-svgrepo-com.svg" alt="Bebidas y licores" class="categories-sidebar__icon" width="24" height="24">
+                Bebidas y licores
+                <img src="Images/right-arrow-next-svgrepo-com.svg" alt="Ir" class="categories-sidebar__arrow" width="20" height="20">
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-sidebar__header">
+            <h2 class="cart-sidebar__title">Tu carrito</h2>
+            <span class="cart-sidebar__count" id="cartCount">0</span>
+            <button class="cart-sidebar__close" id="cartClose">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-sidebar__content" id="cartContent">
+        </div>
+        <div class="cart-sidebar__footer" id="cartFooter">
+            <div class="cart-sidebar__total">
+                <span class="cart-sidebar__total-label">Total</span>
+                <span class="cart-sidebar__total-value" id="cartTotal">$0</span>
+            </div>
+            <a href="checkout.html" class="btn btn--primary btn--full cart-sidebar__checkout">
+                Ir a pagar
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </aside>
+
+    <script src="cart.js"></script>
+    <script src="productos.js"></script>
+    <script>
+        // Categories Sidebar
+        const categoriesToggle = document.getElementById('categoriesToggle');
+        const categoriesSidebar = document.getElementById('categoriesSidebar');
+        const categoriesOverlay = document.getElementById('categoriesOverlay');
+        const categoriesClose = document.getElementById('categoriesClose');
+
+        function openCategories() {
+            categoriesSidebar.classList.add('categories-sidebar--open');
+            categoriesOverlay.classList.add('categories-overlay--visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCategories() {
+            categoriesSidebar.classList.remove('categories-sidebar--open');
+            categoriesOverlay.classList.remove('categories-overlay--visible');
+            document.body.style.overflow = '';
+        }
+
+        categoriesToggle?.addEventListener('click', openCategories);
+        categoriesClose?.addEventListener('click', closeCategories);
+        categoriesOverlay?.addEventListener('click', closeCategories);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && categoriesSidebar.classList.contains('categories-sidebar--open')) {
+                closeCategories();
+            }
+        });
+
+        // ============================================
+        // Product Detail Logic
+        // ============================================
+
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get('id');
+        const product = getProductById(productId);
+
+        if (!product) {
+            document.getElementById('productMain').innerHTML = `
+                <div class="product-detail__not-found">
+                    <h2>Producto no encontrado</h2>
+                    <p>El producto que buscas no está disponible.</p>
+                    <a href="index.html" class="btn btn--primary">Volver al inicio</a>
+                </div>
+            `;
+        } else {
+            renderProduct(product);
+            renderRelatedProducts(product);
+        }
+
+        function renderProduct(product) {
+            document.getElementById('pageTitle').textContent = `${product.name} - Supermerprado El Rey`;
+            document.getElementById('productName').textContent = product.name;
+            document.getElementById('productPrice').textContent = '$' + product.price.toLocaleString('es-CO');
+            document.getElementById('productDescription').textContent = product.description;
+            document.getElementById('fullDescription').textContent = product.description;
+
+            const img = document.querySelector('#productImage img');
+            img.src = product.image;
+            img.alt = product.name;
+
+            // Quantity selector
+            const qtyValue = document.getElementById('qtyValue');
+            let quantity = 1;
+
+            document.getElementById('qtyMinus').addEventListener('click', () => {
+                if (quantity > 1) {
+                    quantity--;
+                    qtyValue.textContent = quantity;
+                }
+            });
+
+            document.getElementById('qtyPlus').addEventListener('click', () => {
+                quantity++;
+                qtyValue.textContent = quantity;
+            });
+
+            // Add to cart
+            document.getElementById('addToCartBtn').addEventListener('click', () => {
+                addToCart({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    quantity: quantity
+                });
+
+                const btn = document.getElementById('addToCartBtn');
+                btn.textContent = '✓ Agregado';
+                btn.style.backgroundColor = '#16A34A';
+                setTimeout(() => {
+                    btn.textContent = 'Agregar al carrito';
+                    btn.style.backgroundColor = '';
+                }, 1500);
+
+                quantity = 1;
+                qtyValue.textContent = 1;
+            });
+
+            // Buy now
+            document.getElementById('buyNowBtn').addEventListener('click', () => {
+                addToCart({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    quantity: quantity
+                });
+                window.location.href = 'checkout.html';
+            });
+
+            // Reviews
+            renderReviews(product.reviews);
+        }
+
+        function renderReviews(reviews) {
+            const container = document.getElementById('reviewsList');
+
+            if (!reviews || reviews.length === 0) {
+                container.innerHTML = '<p class="product-reviews__empty">No hay reseñas aún. ¡Sé el primero en opinar!</p>';
+                return;
+            }
+
+            container.innerHTML = reviews.map(review => `
+                <article class="product-reviews__item">
+                    <div class="product-reviews__item-header">
+                        <strong class="product-reviews__item-author">${review.author}</strong>
+                        <span class="product-reviews__item-rating">${getStarRating(review.rating)}</span>
+                    </div>
+                    <p class="product-reviews__item-text">${review.text}</p>
+                    <span class="product-reviews__item-date">${review.date}</span>
+                </article>
+            `).join('');
+        }
+
+        // Star rating interaction
+        const stars = document.querySelectorAll('.product-reviews__star');
+        let selectedRating = 0;
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.dataset.rating);
+                stars.forEach((s, i) => {
+                    s.textContent = i < selectedRating ? '★' : '☆';
+                    if (i < selectedRating) {
+                        s.classList.add('product-reviews__star--active');
+                    } else {
+                        s.classList.remove('product-reviews__star--active');
+                    }
+                });
+            });
+
+            star.addEventListener('mouseenter', () => {
+                const rating = parseInt(star.dataset.rating);
+                stars.forEach((s, i) => {
+                    s.textContent = i < rating ? '★' : '☆';
+                });
+            });
+
+            star.addEventListener('mouseleave', () => {
+                stars.forEach((s, i) => {
+                    s.textContent = i < selectedRating ? '★' : '☆';
+                });
+            });
+        });
+
+        // Tabs
+        const tabs = document.querySelectorAll('.product-tabs__tab');
+        const panels = {
+            description: document.getElementById('panelDescription'),
+            reviews: document.getElementById('panelReviews')
+        };
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('product-tabs__tab--active'));
+                tab.classList.add('product-tabs__tab--active');
+
+                Object.values(panels).forEach(p => p.classList.remove('product-tabs__panel--active'));
+                const target = tab.dataset.tab;
+                if (panels[target]) {
+                    panels[target].classList.add('product-tabs__panel--active');
+                }
+            });
+        });
+
+        // Related products
+        function renderRelatedProducts(product) {
+            const related = getRelatedProducts(product, 6);
+            const grid = document.getElementById('relatedGrid');
+
+            if (related.length === 0) {
+                grid.innerHTML = '<p>No hay productos relacionados.</p>';
+                return;
+            }
+
+            grid.innerHTML = related.map(p => `
+                <article class="product-card product-related__card" data-product-id="${p.id}">
+                    <div class="product-card__image">
+                        <img src="${p.image}" alt="${p.name}">
+                    </div>
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">${p.name}</h3>
+                        <p class="product-card__price">$${p.price.toLocaleString('es-CO')}</p>
+                        <div class="product-card__actions">
+                            <div class="product-card__quantity">
+                                <button class="product-card__qty-btn">−</button>
+                                <span class="product-card__qty-value">1</span>
+                                <button class="product-card__qty-btn">+</button>
+                            </div>
+                            <button class="product-card__add">
+                                <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+
+            initProductCards();
+
+            // Click on related product card to navigate
+            grid.querySelectorAll('.product-related__card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    if (e.target.closest('.product-card__add') || e.target.closest('.product-card__qty-btn')) return;
+                    window.location.href = `producto.html?id=${card.dataset.productId}`;
+                });
+            });
+        }
+
+        // Search
+        const searchInput = document.querySelector('.header__search-input');
+        searchInput?.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                console.log('Searching for:', searchInput.value);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto - Supermerprado El Rey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #00552C;
+            --color-primary-dark: #004225;
+            --color-white: #FFFFFF;
+            --color-black: #000000;
+            --color-tertiary: #639A7F;
+            --color-grey: #9CA3AF;
+            --color-light-grey: #F3F4F6;
+            --color-background: #F9FAFB;
+            --color-border-light: #E5E7EB;
+            --color-contrast: #FFFA01;
+            --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-family-heading: 'DM Sans', sans-serif;
+            --font-family-body: 'Poppins', sans-serif;
+            --font-size-h2: 40px;
+            --font-size-h3: 32px;
+            --font-size-h4: 24px;
+            --font-size-body1: 16px;
+            --font-size-body2: 14px;
+            --font-size-caption: 12px;
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            --spacing-xxl: 48px;
+            --spacing-xxxl: 64px;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 20px;
+            --radius-pill: 90px;
+            --radius-circle: 500px;
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --transition-fast: 150ms ease-in-out;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--font-family);
+            background-color: var(--color-background);
+            color: var(--color-black);
+            line-height: 1.5;
+            min-height: 100vh;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        /* ===== HEADER ===== */
+        .header {
+            background-color: var(--color-primary);
+            padding: 20px 150px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header__nav {
+            max-width: 1920px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--spacing-xl);
+        }
+        .header__left {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xl);
+        }
+        .header__logo {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-circle);
+            border: 2px solid var(--color-contrast);
+            overflow: hidden;
+            background-color: var(--color-primary);
+        }
+        .header__logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .header__menu-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: var(--spacing-xs);
+            color: var(--color-white);
+            font-family: var(--font-family-heading);
+            font-size: var(--font-size-body1);
+            font-weight: 700;
+            border-radius: var(--radius-sm);
+            transition: background-color var(--transition-fast);
+        }
+        .header__menu-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .header__menu-icon {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: var(--spacing-xs);
+        }
+        .header__menu-icon span {
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: var(--color-contrast);
+            border-radius: 2px;
+        }
+        .header__nav-links {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xl);
+        }
+        .header__nav-link {
+            color: var(--color-white);
+            font-family: var(--font-family-heading);
+            font-size: var(--font-size-body1);
+            font-weight: 700;
+            transition: color var(--transition-fast);
+        }
+        .header__nav-link:hover {
+            color: var(--color-contrast);
+        }
+        .header__search {
+            flex: 1;
+            max-width: 467px;
+            position: relative;
+        }
+        .header__search-input {
+            width: 100%;
+            padding: 12px 16px;
+            padding-left: 44px;
+            background-color: var(--color-white);
+            border: none;
+            border-radius: 10px;
+            font-size: var(--font-size-body1);
+            color: var(--color-black);
+            outline: none;
+        }
+        .header__search-input::placeholder {
+            color: var(--color-primary);
+        }
+        .header__search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            color: var(--color-primary);
+        }
+        .header__actions {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xl);
+        }
+        .header__cart {
+            position: relative;
+            padding: 8px;
+            color: var(--color-contrast);
+        }
+        .header__cart-icon {
+            width: 24px;
+            height: 24px;
+        }
+        .header__cart-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: var(--color-white);
+            color: var(--color-black);
+            font-size: var(--font-size-caption);
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header__user {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-circle);
+            background-color: var(--color-light-grey);
+            overflow: hidden;
+        }
+        .header__user img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* ===== MAIN ===== */
+        .main--product {
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: var(--spacing-xxl) 200px;
+        }
+        /* ===== PRODUCT DETAIL ===== */
+        .product-detail {
+            display: flex;
+            gap: 60px;
+            margin-bottom: var(--spacing-xxxl);
+        }
+        .product-detail__gallery {
+            flex: 0 0 600px;
+            height: 550px;
+        }
+        .product-detail__image {
+            width: 100%;
+            height: 100%;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background-color: var(--color-light-grey);
+        }
+        .product-detail__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .product-detail__info {
+            flex: 1;
+            max-width: 506px;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+            padding-top: var(--spacing-lg);
+        }
+        .product-detail__info-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+        }
+        .product-detail__title {
+            font-family: var(--font-family-heading);
+            font-size: var(--font-size-h2);
+            font-weight: 700;
+            color: var(--color-black);
+            line-height: 1.1em;
+            margin: 0;
+        }
+        .product-detail__actions {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-shrink: 0;
+        }
+        .product-detail__action-btn {
+            width: 38px;
+            height: 35px;
+            border-radius: var(--radius-circle);
+            border: 1px solid var(--color-border-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-grey);
+            background: var(--color-white);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        .product-detail__action-btn:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+        .product-detail__price {
+            font-family: var(--font-family-heading);
+            font-size: var(--font-size-h3);
+            font-weight: 700;
+            color: var(--color-primary);
+            margin: 0;
+        }
+        .product-detail__description {
+            font-family: var(--font-family-body);
+            font-size: var(--font-size-body1);
+            color: var(--color-black);
+            line-height: 1.6em;
+            margin: 0;
+        }
+        .product-detail__quantity {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+        .product-detail__qty-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-circle);
+            border: 1px solid var(--color-border-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-white);
+            color: var(--color-tertiary);
+            font-size: var(--font-size-h4);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        .product-detail__qty-btn:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+        .product-detail__qty-value {
+            font-size: var(--font-size-h4);
+            font-weight: 500;
+            color: var(--color-black);
+            min-width: 40px;
+            text-align: center;
+        }
+        .product-detail__add-btn {
+            margin-left: auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            padding: 12px 24px;
+            font-family: var(--font-family-heading);
+            font-size: var(--font-size-body1);
+            font-weight: 700;
+            border-radius: var(--radius-pill);
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        .product-detail__add-btn:hover {
+            background-color: var(--color-primary-dark);
+        }
+        .product-detail__add-btn:active {
+            transform: scale(0.96);
+        }
+        .product-detail__bottom-actions {
+            display: flex;
+            gap: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--color-border-light);
+        }
+        .product-detail__bottom-actions .btn {
+            flex: 1;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-md) var(--spacing-lg);
+            font-family: var(--font-family-heading);
+            font-size: var(--font-size-body1);
+            font-weight: 700;
+            border-radius: var(--radius-pill);
+            transition: all var(--transition-fast);
+            cursor: pointer;
+        }
+        .btn:active {
+            transform: scale(0.96);
+        }
+        .btn--primary {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+        }
+        .btn--primary:hover {
+            background-color: var(--color-primary-dark);
+        }
+        .btn--outline {
+            background-color: transparent;
+            color: var(--color-tertiary);
+            border: 2px solid var(--color-primary);
+        }
+        .btn--outline:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+        /* ===== BOTTOM SECTION ===== */
+        .product-bottom {
+            display: flex;
+            gap: 60px;
+        }
+        .product-bottom__left {
+            flex: 0 0 598px;
+        }
+        .product-bottom__right {
+            flex: 1;
+            min-width: 0;
+        }
+        /* ===== TABS ===== */
+        .product-tabs__header {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid var(--color-border-light);
+            margin-bottom: var(--spacing-lg);
+        }
+        .product-tabs__tab {
+            padding: var(--spacing-sm) 0;
+            font-family: var(--font-family-body);
+            font-size: var(--font-size-body1);
+            font-weight: 500;
+            color: var(--color-black);
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            margin-right: var(--spacing-xl);
+        }
+        .product-tabs__tab::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: transparent;
+        }
+        .product-tabs__tab--active {
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+        .product-tabs__tab--active::after {
+            background-color: var(--color-primary);
+        }
+        .product-tabs__panel {
+            display: none;
+        }
+        .product-tabs__panel--active {
+            display: block;
+        }
+        .product-tabs__panel p {
+            font-family: var(--font-family-body);
+            font-size: var(--font-size-body1);
+            color: var(--color-black);
+            line-height: 1.7em;
+        }
+        /* ===== REVIEWS ===== */
+        .product-reviews__add {
+            margin-bottom: var(--spacing-xl);
+            padding-bottom: var(--spacing-xl);
+            border-bottom: 1px solid var(--color-border-light);
+        }
+        .product-reviews__add-title {
+            font-family: var(--font-family-heading);
+            font-size: var(--font-size-h4);
+            font-weight: 700;
+            color: var(--color-black);
+            margin: 0 0 var(--spacing-md) 0;
+        }
+        .product-reviews__stars {
+            display: flex;
+            gap: var(--spacing-xs);
+        }
+        .product-reviews__star {
+            font-size: 24px;
+            color: #F59E0B;
+            cursor: pointer;
+            user-select: none;
+        }
+        .product-reviews__list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+        .product-reviews__item {
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            background-color: var(--color-light-grey);
+        }
+        .product-reviews__item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-sm);
+        }
+        .product-reviews__item-author {
+            font-family: var(--font-family-body);
+            font-size: var(--font-size-body1);
+            font-weight: 600;
+            color: var(--color-black);
+        }
+        .product-reviews__item-rating {
+            font-size: 16px;
+            color: #F59E0B;
+        }
+        .product-reviews__item-text {
+            font-family: var(--font-family-body);
+            font-size: var(--font-size-body2);
+            color: var(--color-black);
+            line-height: 1.5em;
+            margin: 0 0 var(--spacing-sm) 0;
+        }
+        .product-reviews__item-date {
+            font-family: var(--font-family-body);
+            font-size: var(--font-size-caption);
+            color: var(--color-grey);
+        }
+        /* ===== RELATED PRODUCTS ===== */
+        .product-related__title {
+            font-family: var(--font-family-heading);
+            font-size: var(--font-size-h4);
+            font-weight: 700;
+            color: var(--color-black);
+            text-align: right;
+            margin: 0 0 var(--spacing-lg) 0;
+        }
+        .product-related__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+        }
+        .product-card {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border-light);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-md);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+            cursor: pointer;
+        }
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .product-card__image {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: var(--radius-md);
+            background-color: var(--color-light-grey);
+            margin-bottom: var(--spacing-md);
+            overflow: hidden;
+        }
+        .product-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .product-card__info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+        .product-card__title {
+            font-family: var(--font-family-body);
+            font-size: var(--font-size-body2);
+            font-weight: 400;
+            color: var(--color-black);
+        }
+        .product-card__price {
+            font-family: var(--font-family-body);
+            font-size: var(--font-size-body1);
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+        .product-card__actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: var(--spacing-sm);
+        }
+        .product-card__quantity {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+        .product-card__qty-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: var(--radius-circle);
+            border: 1px solid var(--color-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-grey);
+            font-size: var(--font-size-body1);
+            transition: all var(--transition-fast);
+        }
+        .product-card__qty-btn:hover {
+            border-color: var(--color-contrast);
+            color: var(--color-contrast);
+        }
+        .product-card__qty-value {
+            font-size: var(--font-size-body1);
+            font-weight: 500;
+            color: var(--color-black);
+            min-width: 24px;
+            text-align: center;
+        }
+        .product-card__add {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-circle);
+            background-color: var(--color-contrast);
+            color: var(--color-black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: var(--color-primary);
+            padding: 48px 60px;
+            margin-top: var(--spacing-xxxl);
+        }
+        .footer__content {
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+        .footer__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 92px;
+            padding-bottom: var(--spacing-xl);
+        }
+        .footer__logo {
+            width: 300px;
+            height: 300px;
+            border-radius: var(--radius-circle);
+            border: 5px solid var(--color-contrast);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .footer__logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .footer__sections {
+            display: flex;
+            gap: 92px;
+        }
+        .footer__section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .footer__section-title {
+            font-family: var(--font-family-body);
+            font-size: var(--font-size-body1);
+            font-weight: 600;
+            color: var(--color-contrast);
+        }
+        .footer__section-link {
+            font-family: 'Rubik', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--color-white);
+            line-height: 1.375em;
+        }
+        .footer__section-link:hover {
+            opacity: 0.7;
+        }
+        .footer__contact-item {
+            font-family: 'Lato', sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            color: var(--color-white);
+            line-height: 1.47em;
+        }
+        .footer__contact-item + .footer__contact-item {
+            margin-top: 12px;
+        }
+        .footer__bottom {
+            padding-top: var(--spacing-lg);
+            text-align: center;
+        }
+        .footer__copyright {
+            font-family: 'Rubik', sans-serif;
+            font-size: var(--font-size-body2);
+            color: var(--color-white);
+            opacity: 0.8;
+        }
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1400px) {
+            .main--product {
+                padding: var(--spacing-xxl) 100px;
+            }
+            .product-detail__gallery {
+                flex: 0 0 450px;
+                height: 450px;
+            }
+            .product-bottom__left {
+                flex: 0 0 450px;
+            }
+            .product-related__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 1200px) {
+            .header {
+                padding: 20px 60px;
+            }
+            .main--product {
+                padding: var(--spacing-xxl) 60px;
+            }
+            .product-detail {
+                gap: var(--spacing-xl);
+            }
+            .product-detail__gallery {
+                flex: 0 0 400px;
+                height: 400px;
+            }
+            .product-detail__info {
+                max-width: 400px;
+            }
+            .product-detail__title {
+                font-size: var(--font-size-h3);
+            }
+            .product-bottom {
+                gap: var(--spacing-xl);
+            }
+            .product-bottom__left {
+                flex: 0 0 400px;
+            }
+            .footer {
+                padding: 48px 40px;
+            }
+        }
+        @media (max-width: 992px) {
+            .main--product {
+                padding: var(--spacing-xl) 60px;
+            }
+            .product-detail {
+                flex-direction: column;
+                gap: var(--spacing-xl);
+            }
+            .product-detail__gallery {
+                flex: none;
+                width: 100%;
+                height: 400px;
+                max-width: 600px;
+            }
+            .product-detail__info {
+                max-width: 100%;
+            }
+            .product-bottom {
+                flex-direction: column;
+            }
+            .product-bottom__left {
+                flex: none;
+                width: 100%;
+            }
+            .product-related__title {
+                text-align: left;
+            }
+            .product-related__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .header {
+                padding: 16px 24px;
+            }
+            .header__nav {
+                flex-wrap: wrap;
+            }
+            .header__search {
+                order: 3;
+                max-width: 100%;
+                width: 100%;
+                margin-top: var(--spacing-md);
+            }
+            .header__nav-links {
+                display: none;
+            }
+            .main--product {
+                padding: var(--spacing-md) 24px;
+            }
+            .product-detail__gallery {
+                height: 300px;
+            }
+            .product-detail__title {
+                font-size: var(--font-size-h3);
+            }
+            .product-detail__price {
+                font-size: var(--font-size-h4);
+            }
+            .product-detail__quantity {
+                flex-wrap: wrap;
+            }
+            .product-detail__add-btn {
+                margin-left: 0;
+                width: 100%;
+                margin-top: var(--spacing-sm);
+            }
+            .product-related__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer {
+                padding: 32px 24px;
+            }
+            .footer__top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--spacing-xl);
+            }
+            .footer__sections {
+                flex-wrap: wrap;
+                gap: var(--spacing-xl);
+            }
+        }
+        @media (max-width: 480px) {
+            .header {
+                padding: var(--spacing-sm) var(--spacing-md);
+            }
+            .header__logo {
+                width: 48px;
+                height: 48px;
+            }
+            .header__menu-item span {
+                display: none;
+            }
+            .product-detail__gallery {
+                height: 250px;
+            }
+            .product-detail__title {
+                font-size: var(--font-size-h4);
+            }
+            .product-detail__bottom-actions {
+                flex-direction: column;
+            }
+            .product-related__grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--spacing-sm);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__left">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="images/Logo.svg" alt="El Rey Logo">
+                    </a>
+                </div>
+                <div class="header__menu">
+                    <button class="header__menu-item">
+                        <div class="header__menu-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span>Categorías</span>
+                    </button>
+                </div>
+                <div class="header__nav-links">
+                    <a href="index.html" class="header__nav-link">Inicio</a>
+                    <a href="about.html" class="header__nav-link">Sobre Nosotros</a>
+                </div>
+            </div>
+            <div class="header__search">
+                <svg class="header__search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <input type="text" class="header__search-input" placeholder="¿Qué productos buscas?">
+            </div>
+            <div class="header__actions">
+                <button class="header__cart">
+                    <svg class="header__cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    <span class="header__cart-badge">0</span>
+                </button>
+                <div class="header__user">
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100&h=100&fit=crop" alt="Usuario">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main class="main--product">
+        <!-- Product Detail Section -->
+        <section class="product-detail">
+            <div class="product-detail__gallery">
+                <div class="product-detail__image">
+                    <img src="Images/manzanas.webp" alt="Manzanas">
+                </div>
+            </div>
+            <div class="product-detail__info">
+                <div class="product-detail__info-header">
+                    <h1 class="product-detail__title">Manzanas</h1>
+                    <div class="product-detail__actions">
+                        <button class="product-detail__action-btn" title="Compartir">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                            </svg>
+                        </button>
+                        <button class="product-detail__action-btn" title="Favorito">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <p class="product-detail__price">$10.000</p>
+                <p class="product-detail__description">Manzanas frescas y crujientes, perfectas para disfrutar solas o en tus recetas favoritas. Ricas en fibra y vitamina C.</p>
+                <div class="product-detail__quantity">
+                    <button class="product-detail__qty-btn">−</button>
+                    <span class="product-detail__qty-value">1</span>
+                    <button class="product-detail__qty-btn">+</button>
+                    <button class="product-detail__add-btn">Agregar al carrito</button>
+                </div>
+                <div class="product-detail__bottom-actions">
+                    <a href="index.html" class="btn btn--outline">Seguir comprando</a>
+                    <button class="btn btn--primary">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                        Comprar ahora
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Bottom Section -->
+        <section class="product-bottom">
+            <div class="product-bottom__left">
+                <div class="product-tabs">
+                    <div class="product-tabs__header">
+                        <button class="product-tabs__tab product-tabs__tab--active">Descripción</button>
+                        <button class="product-tabs__tab">Reseñas</button>
+                    </div>
+                    <div class="product-tabs__content">
+                        <div class="product-tabs__panel product-tabs__panel--active">
+                            <p>Manzanas frescas y crujientes, perfectas para disfrutar solas o en tus recetas favoritas. Ricas en fibra y vitamina C.</p>
+                        </div>
+                        <div class="product-tabs__panel">
+                            <div class="product-reviews">
+                                <div class="product-reviews__add">
+                                    <h3 class="product-reviews__add-title">Agrega una reseña</h3>
+                                    <div class="product-reviews__stars">
+                                        <span class="product-reviews__star">☆</span>
+                                        <span class="product-reviews__star">☆</span>
+                                        <span class="product-reviews__star">☆</span>
+                                        <span class="product-reviews__star">☆</span>
+                                        <span class="product-reviews__star">☆</span>
+                                    </div>
+                                </div>
+                                <div class="product-reviews__list">
+                                    <article class="product-reviews__item">
+                                        <div class="product-reviews__item-header">
+                                            <strong class="product-reviews__item-author">María G.</strong>
+                                            <span class="product-reviews__item-rating">★★★★★</span>
+                                        </div>
+                                        <p class="product-reviews__item-text">Muy frescas y deliciosas</p>
+                                        <span class="product-reviews__item-date">2024-03-15</span>
+                                    </article>
+                                    <article class="product-reviews__item">
+                                        <div class="product-reviews__item-header">
+                                            <strong class="product-reviews__item-author">Carlos L.</strong>
+                                            <span class="product-reviews__item-rating">★★★★☆</span>
+                                        </div>
+                                        <p class="product-reviews__item-text">Buena calidad, buen precio</p>
+                                        <span class="product-reviews__item-date">2024-03-10</span>
+                                    </article>
+                                    <article class="product-reviews__item">
+                                        <div class="product-reviews__item-header">
+                                            <strong class="product-reviews__item-author">Ana P.</strong>
+                                            <span class="product-reviews__item-rating">★★★★★</span>
+                                        </div>
+                                        <p class="product-reviews__item-text">Siempre compro aquí, recomendadas</p>
+                                        <span class="product-reviews__item-date">2024-02-28</span>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-bottom__right">
+                <h2 class="product-related__title">Productos relacionados</h2>
+                <div class="product-related__grid">
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <img src="Images/Banana.webp" alt="Plátanos">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Plátanos</h3>
+                            <p class="product-card__price">$10.000</p>
+                            <div class="product-card__actions">
+                                <div class="product-card__quantity">
+                                    <button class="product-card__qty-btn">−</button>
+                                    <span class="product-card__qty-value">1</span>
+                                    <button class="product-card__qty-btn">+</button>
+                                </div>
+                                <button class="product-card__add">
+                                    <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <img src="Images/naranjas.webp" alt="Naranjas">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Naranjas</h3>
+                            <p class="product-card__price">$10.000</p>
+                            <div class="product-card__actions">
+                                <div class="product-card__quantity">
+                                    <button class="product-card__qty-btn">−</button>
+                                    <span class="product-card__qty-value">1</span>
+                                    <button class="product-card__qty-btn">+</button>
+                                </div>
+                                <button class="product-card__add">
+                                    <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <img src="Images/verduras.webp" alt="Verduras">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Verduras</h3>
+                            <p class="product-card__price">$10.000</p>
+                            <div class="product-card__actions">
+                                <div class="product-card__quantity">
+                                    <button class="product-card__qty-btn">−</button>
+                                    <span class="product-card__qty-value">1</span>
+                                    <button class="product-card__qty-btn">+</button>
+                                </div>
+                                <button class="product-card__add">
+                                    <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <img src="https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=300&h=300&fit=crop" alt="Pollo fresco">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Pollo fresco</h3>
+                            <p class="product-card__price">$10.000</p>
+                            <div class="product-card__actions">
+                                <div class="product-card__quantity">
+                                    <button class="product-card__qty-btn">−</button>
+                                    <span class="product-card__qty-value">1</span>
+                                    <button class="product-card__qty-btn">+</button>
+                                </div>
+                                <button class="product-card__add">
+                                    <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <img src="https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300&h=300&fit=crop" alt="Carne de res">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Carne de res</h3>
+                            <p class="product-card__price">$10.000</p>
+                            <div class="product-card__actions">
+                                <div class="product-card__quantity">
+                                    <button class="product-card__qty-btn">−</button>
+                                    <span class="product-card__qty-value">1</span>
+                                    <button class="product-card__qty-btn">+</button>
+                                </div>
+                                <button class="product-card__add">
+                                    <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <img src="Images/cerdo.webp" alt="Carne de cerdo">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Carne de cerdo</h3>
+                            <p class="product-card__price">$10.000</p>
+                            <div class="product-card__actions">
+                                <div class="product-card__quantity">
+                                    <button class="product-card__qty-btn">−</button>
+                                    <span class="product-card__qty-value">1</span>
+                                    <button class="product-card__qty-btn">+</button>
+                                </div>
+                                <button class="product-card__add">
+                                    <img src="Images/add-button.svg" alt="Agregar" width="48" height="48">
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__top">
+                <div class="footer__logo">
+                    <img src="images/Logo.svg" alt="El Rey Logo">
+                </div>
+                <div class="footer__sections">
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Contáctanos</h4>
+                        <p class="footer__contact-item">+57 323-3312609</p>
+                        <p class="footer__contact-item">Calle 42sur #81-50</p>
+                        <p class="footer__contact-item">San Antonio de Prado, Antioquia</p>
+                    </div>
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Políticas</h4>
+                        <a href="#" class="footer__section-link">Política de tratamiento de datos</a>
+                        <a href="#" class="footer__section-link">Política de privacidad</a>
+                        <a href="#" class="footer__section-link">Política de cambios y devoluciones</a>
+                        <a href="#" class="footer__section-link">Política de descuentos</a>
+                    </div>
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Sobre Nosotros</h4>
+                        <a href="about.html" class="footer__section-link">¿Quiénes somos?</a>
+                        <a href="about.html" class="footer__section-link">¿Dónde nos ubicamos?</a>
+                        <a href="about.html" class="footer__section-link">¿Cuál es nuestro propósito?</a>
+                        <a href="about.html" class="footer__section-link">¿Qué nos diferencia?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 Supermerprado El Rey. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -867,6 +867,14 @@
         document.querySelectorAll('.filter-checkbox input').forEach(checkbox => {
             checkbox.addEventListener('change', applyFilters);
         });
+
+        // Product card click → product detail page
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (e.target.closest('.product-card__add') || e.target.closest('.product-card__qty-btn')) return;
+                window.location.href = `producto.html?id=${card.dataset.productId}`;
+            });
+        });
     </script>
 </body>
 </html>
